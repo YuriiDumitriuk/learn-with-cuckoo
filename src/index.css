@@ -317,15 +317,15 @@ footer {
 
     /* Możemy dostosować kontener mascota, aby nie zasłaniał innych elementów na ekranach o mniejszej szerokości */
     .mascot-box {
-        position: fixed;
-        top: 20px; /* Ustawia maskotkę w górnym rogu */
-        right: 20px; /* Ustawia maskotkę w prawym rogu */
+        position:inherit;
+/*        top: 20px;   
+        right: 20px;   */
         background-color: #fff;
         padding: 10px;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
-        width: 120px; /* Zmniejszamy szerokość */
+        width: 120px;  
         height: auto;
     }
 

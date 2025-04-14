@@ -2,6 +2,22 @@
 import { useState, useEffect } from "react";
 import Mascot from "../components/Mascot"; // Import Mascot component
 
+const audioExists = async (word) => {
+    const fileName = `Pl-${word}.ogg`;
+    const url = `https://commons.wikimedia.org/w/api.php?action=query&titles=File:${fileName}&format=json&origin=*`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const pages = data.query.pages;
+        const page = Object.values(pages)[0];
+        return !page.missing;
+    } catch (error) {
+        console.error("Error checking audio existence:", error);
+        return false;
+    }
+};
+
 function AudioWord() {
     const [currentWord, setCurrentWord] = useState(null);
     const [userInput, setUserInput] = useState("");
@@ -251,13 +267,27 @@ function AudioWord() {
     ];
 
     // Funkcja do wybierania losowego słowa
-    const getRandomWord = () => {
-        const randomIndex = Math.floor(Math.random() * wordsList.length);
-        const word = wordsList[randomIndex];
+    // Modify your getRandomWord function:
+    const getRandomWord = async () => {
+        let found = false;
+        let word = "";
+
+        while (!found) {
+            const randomIndex = Math.floor(Math.random() * wordsList.length);
+            const candidate = wordsList[randomIndex];
+
+            const exists = await audioExists(candidate);
+            if (exists) {
+                word = candidate;
+                found = true;
+            }
+        }
+
         setCurrentWord(word);
-        setUserInput(""); // Reset user input
-        setResult({ isCorrect: null, showResult: false }); // Reset result state
+        setUserInput("");
+        setResult({ isCorrect: null, showResult: false });
     };
+
 
     // Funkcja do sprawdzania poprawności słowa
     const checkWord = () => {
@@ -325,7 +355,7 @@ function AudioWord() {
                     </button>
                     <button
                         className="btn-primary px-8 py-4"
-                        onClick={() => window.location.href = '/'}>
+                        onClick={() => window.location.href = '/learn-with-cuckoo'}>
                         Powrót do strony głównej
                     </button>
                 </>
@@ -339,7 +369,7 @@ function AudioWord() {
             {/* New word button */}
             {!currentWord && (
                 <button
-                    onClick={getRandomWord}
+                    onClick={() => getRandomWord()}
                     className="btn-primary px-8 py-4"
                 >
                     Nowe słowo
