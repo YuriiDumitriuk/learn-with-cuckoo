@@ -1,0 +1,47 @@
+{
+  "Ó vs U": {
+    "words": [
+      {
+        "wordBase": "m__ka",
+        "correctLetter": "ó",
+        "fullWord": "móka",
+        "definition": "Mąka pisze się przez 'ó'."
+      },
+      {
+        "wordBase": "b__bka",
+        "correctLetter": "ó",
+        "fullWord": "bóbka",
+        "definition": "Bóbka pisze się przez 'ó'."
+      }
+    ],
+    "availableLetters": [ "u", "ó" ]
+  },
+  "RZ vs Ż": {
+    "words": [
+      {
+        "wordBase": "w__deczek",
+        "correctLetter": "ż",
+        "fullWord": "wędzeczek",
+        "definition": "Wędzeczek pisze się przez 'ż'."
+      },
+      {
+        "wordBase": "p__lka",
+        "correctLetter": "r",
+        "fullWord": "płotka",
+        "definition": "Płotka pisze się przez 'r'."
+      }
+    ],
+    "availableLetters": [ "r", "ż" ]
+  },
+  "Wielka litera": {
+    "words": [
+      {
+        "wordBase": "__omek",
+        "correctLetter": "L",
+        "fullWord": "Lomek",
+        "definition": "Lomek zaczyna się wielką literą."
+      }
+    ],
+    "availableLetters": [ "l" ]
+  }
+}

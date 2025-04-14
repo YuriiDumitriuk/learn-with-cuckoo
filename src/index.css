@@ -1,0 +1,363 @@
+﻿/* Reset + base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fefefb;
+    color: #1c1c1c;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Container helpers */
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Zapewniamy, że kontener zajmuje całą szerokość ekranu */
+    max-width: 1200px; /* Ograniczamy maksymalną szerokość kontenera */
+    margin: 0 auto; /* Centrujemy kontener na stronie */
+    padding: 20px; /* Ustawiamy padding w kontenerze */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    button:hover {
+        transform: scale(1.03);
+    }
+
+.btn-primary {
+    background-color: #58cc02;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #4eb902;
+    }
+
+.btn-secondary {
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+    .btn-secondary:hover {
+        background-color: #d5d5d5;
+    }
+
+/* Mascot */
+.mascot-box {
+    position: fixed;
+    top: 30%;
+    left: 65%;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 160px;
+}
+
+.mascot-emoji {
+    font-size: 2.5rem;
+    margin-top: 6px;
+}
+
+/* Word display */
+.word-box {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    margin: 20px 0;
+}
+
+/* Flexbox utility classes for centering */
+.flex-grow {
+    flex-grow: 1;
+}
+
+/* Margin & padding helpers */
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+/* Text utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.text-5xl {
+    font-size: 3rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-green-600 {
+    color: #38a169;
+}
+
+.text-yellow-500 {
+    color: #f6e05e;
+}
+
+.text-gray-700 {
+    color: #4a5568;
+}
+
+.text-red-500 {
+    color: #f56565;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Flexbox for vertical centering */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom shadow and transitions */
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transition-all {
+    transition: all 0.2s ease;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+/* Flexbox for horizontal alignment of buttons */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Custom styles for the iframe container */
+iframe {
+    width: 100%;
+    max-width: 600px; /* Zwiększamy maksymalną szerokość iframe */
+    height: 80px;
+    max-height: 80px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    white-space: nowrap; /* Zapobiega zawijaniu */
+}
+
+input {
+    width: 100%;
+    max-width: 400px; /* Maksymalna szerokość dla inputu */
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.25rem;
+}
+
+.pretty-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 20px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+    .pretty-input::placeholder {
+        color: #aaa;
+    }
+
+    .pretty-input:focus {
+        border-color: #3b82f6; /* niebieski */
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+    }
+
+footer {
+    position: fixed;
+    bottom: 0; /* Umieszczamy stopkę na dole */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Kolor tła stopki */
+    color: white; /* Kolor tekstu */
+    text-align: center;
+    padding: 15px 0; /* Padding dla estetyki */
+    font-size: 1rem; /* Ustawienie rozmiaru czcionki */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    border-top: 1px solid #444; /* Delikatna granica na górze stopki */
+}
+
+    /* Linki w stopce */
+    footer a {
+        color: #58cc02; /* Zielony kolor linków */
+        text-decoration: none; /* Usunięcie podkreślenia */
+        font-weight: 600;
+    }
+
+        footer a:hover {
+            text-decoration: underline; /* Podkreślenie linków po najechaniu */
+        }
+
+/* Mobile responsiveness: Zmniejszenie paddingu na urządzeniach mobilnych */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0;
+    }
+}
+
+/* Responsywność dla mniejszych ekranów */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Mniejszy rozmiar czcionki */
+        line-height: 1.4; /* Zwiększamy wysokość linii, aby tekst miał więcej przestrzeni */
+        text-align: left; /* Ustawiamy tekst w lewo */
+        margin-left: 15px; /* Przesunięcie w lewo o 15px */
+        margin-bottom: 0rem !important;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    .pretty-input {
+        max-width: 80%;
+    }
+
+    .text-xl {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    /* Możemy dostosować kontener mascota, aby nie zasłaniał innych elementów na ekranach o mniejszej szerokości */
+    .mascot-box {
+        position: fixed;
+        top: 20px; /* Ustawia maskotkę w górnym rogu */
+        right: 20px; /* Ustawia maskotkę w prawym rogu */
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 120px; /* Zmniejszamy szerokość */
+        height: auto;
+    }
+
+    /* Zmniejszenie przycisków */
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Mniejszy rozmiar czcionki */
+        line-height: 1.4; /* Zwiększamy wysokość linii, aby tekst miał więcej przestrzeni */
+        text-align: left; /* Ustawiamy tekst w lewo */
+        margin-left: 15px; /* Przesunięcie w lewo o 15px */
+        margin-bottom:0rem !important;
+    }
+    .text-xl {
+        font-size: 1rem;
+    }
+    .btn-primary, .btn-secondary {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .pretty-input {
+        max-width: 90%;
+    }
+
+    
+
+    footer {
+        font-size: 0.60rem;
+    }
+}
