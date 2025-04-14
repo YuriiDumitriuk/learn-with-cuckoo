@@ -8,7 +8,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/learn-with-cuckoo" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/audio-word" element={<AudioWord />} />
                 {/* Example of dynamic route (commented) */}
                 {/* <Route path="/lesson/:topic" element={<Lesson />} /> */}
