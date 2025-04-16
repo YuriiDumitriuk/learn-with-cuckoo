@@ -68,7 +68,37 @@ button {
     .btn-secondary:hover {
         background-color: #d5d5d5;
     }
-
+.home-button,.home-button > img{
+    position:fixed;
+    top:10px;
+    left:10px;
+    width:50px;
+    height:50px;
+}
+    .home-button:hover {
+        transform:none;
+    }
+    .home-button img {
+        padding:8px;
+    }
+.hidden-answer {
+    color: transparent;
+    background-color: #58cc02;
+    width: max-content;
+    border-radius: 4px;
+    padding: 4px 6px;
+    margin: 0 auto;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    filter: blur(3px);
+    text-align: center;
+}
+    .hidden-answer.revealed {
+        color: inherit;
+        background-color: transparent;
+        filter: none;
+    }
 /* Mascot */
 .mascot-box {
     position: fixed;
@@ -318,12 +348,11 @@ footer {
     /* Możemy dostosować kontener mascota, aby nie zasłaniał innych elementów na ekranach o mniejszej szerokości */
     .mascot-box {
         position:inherit;
-/*        top: 20px;   
-        right: 20px;   */
+
         background-color: #fff;
         padding: 10px;
         border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/*        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
         text-align: center;
         width: 120px;  
         height: auto;

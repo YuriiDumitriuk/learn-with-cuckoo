@@ -1,28 +1,15 @@
 ﻿// src/pages/AudioWord.jsx
 import { useState, useEffect } from "react";
 import Mascot from "../components/Mascot"; // Import Mascot component
+import homeIcon from "../assets/home-icon.svg";
 
-const audioExists = async (word) => {
-    const fileName = `Pl-${word}.ogg`;
-    const url = `https://commons.wikimedia.org/w/api.php?action=query&titles=File:${fileName}&format=json&origin=*`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const pages = data.query.pages;
-        const page = Object.values(pages)[0];
-        return !page.missing;
-    } catch (error) {
-        console.error("Error checking audio existence:", error);
-        return false;
-    }
-};
 
 function AudioWord() {
     const [currentWord, setCurrentWord] = useState(null);
     const [userInput, setUserInput] = useState("");
     const [result, setResult] = useState({ isCorrect: null, showResult: false }); // Combined state for correctness and result visibility
-
+    const [isLoading, setIsLoading] = useState(false);
+    const [hiddenAnswer, setHiddenAnswer] = useState(true);
     // Lista słów do losowania
     const wordsList = [
         "mąka",
@@ -269,25 +256,21 @@ function AudioWord() {
     // Funkcja do wybierania losowego słowa
     // Modify your getRandomWord function:
     const getRandomWord = async () => {
-        let found = false;
+        
         let word = "";
 
-        while (!found) {
+        
             const randomIndex = Math.floor(Math.random() * wordsList.length);
             const candidate = wordsList[randomIndex];
 
-            const exists = await audioExists(candidate);
-            if (exists) {
+            
                 word = candidate;
-                found = true;
-            }
-        }
 
         setCurrentWord(word);
+        
         setUserInput("");
         setResult({ isCorrect: null, showResult: false });
     };
-
 
     // Funkcja do sprawdzania poprawności słowa
     const checkWord = () => {
@@ -301,12 +284,14 @@ function AudioWord() {
     return (
         <div className="centered min-h-screen bg-gray-50 p-6">
             <h1 className="text-5xl font-bold text-blue-500 mb-8">Nauka słów</h1>
-
-            {currentWord && (
+            <button
+                className="btn-primary px-8 py-4 home-button"
+                onClick={() => window.location.href = '/learn-with-cuckoo'}>
+                <img src={homeIcon}></img>
+            </button>
+            {!isLoading && currentWord && (
                 <>
                     <p className="text-xl text-gray-700 mb-6">Posłuchaj słowa:</p>
-
-                    {/* Odtwarzacz audio */}
                     <div className="flex justify-center mb-6">
                         <iframe
                             src={`https://commons.wikimedia.org/wiki/File:Pl-${currentWord}.ogg?embedplayer=yes&showinfo=false`}
@@ -342,29 +327,26 @@ function AudioWord() {
                         <p className="text-xl text-gray-700 mb-6">
                             {result.isCorrect
                                 ? "Brawo! Poprawnie napisane słowo."
-                                : `Oj! Spróbuj ponownie. Poprawne słowo to: ${currentWord}`}
+                                : `Oj! Spróbuj ponownie. Poprawne słowo to:`}
+                            <p className={hiddenAnswer ? "hidden-answer" : "hidden-answer.revealed"} onClick={() => setHiddenAnswer(false)}>{`${currentWord}`}</p>
                         </p>
+                        
                     )}
 
                     {/* Next word button */}
                     <button
-                        onClick={getRandomWord}
+                        onClick={() => { getRandomWord(); setHiddenAnswer(true) }}
                         className="btn-primary px-8 py-4 mb-6"
                     >
                         Następne słowo
                     </button>
-                    <button
-                        className="btn-primary px-8 py-4"
-                        onClick={() => window.location.href = '/learn-with-cuckoo'}>
-                        Powrót do strony głównej
-                    </button>
+
                 </>
             )}
 
             {/* Show mascot with the selected state and result */}
-            <div className="mascot-box mt-6 mx-auto">
-                <Mascot selected={userInput} showResult={result.showResult} correct={currentWord} />
-            </div>
+            <Mascot selected={userInput} showResult={result.showResult} correct={currentWord} />
+            
 
             {/* New word button */}
             {!currentWord && (
