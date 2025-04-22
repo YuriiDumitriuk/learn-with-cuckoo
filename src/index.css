@@ -112,9 +112,13 @@ button {
     width: 160px;
 }
 
-.mascot-emoji {
+.mascot-emoji img{
     font-size: 2.5rem;
     margin-top: 6px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* or 'contain' depending on effect */
+    display: block;
 }
 
 /* Word display */
@@ -286,6 +290,32 @@ button {
         box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
     }
 
+.play-icon-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 50%;
+    background: #58cc02;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    animation: pulse-slow 2.5s ease-in-out infinite;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/* Ikona SVG wewnątrz */
+.play-icon-btn__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #fff;
+}
+
+
+
 footer {
     position: fixed;
     bottom: 0; /* Umieszczamy stopkę na dole */
@@ -348,7 +378,7 @@ footer {
     /* Możemy dostosować kontener mascota, aby nie zasłaniał innych elementów na ekranach o mniejszej szerokości */
     .mascot-box {
         position:inherit;
-
+        margin:15px;
         background-color: #fff;
         padding: 10px;
         border-radius: 12px;

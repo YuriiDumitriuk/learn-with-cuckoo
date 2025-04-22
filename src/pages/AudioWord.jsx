@@ -1,16 +1,16 @@
-﻿// src/pages/AudioWord.jsx
+﻿
+// src/pages/AudioWord.jsx
 import { useState, useEffect } from "react";
-import Mascot from "../components/Mascot"; // Import Mascot component
+import Mascot from "../components/Mascot";
 import homeIcon from "../assets/home-icon.svg";
-
+import speakerIcon from "../assets/speaker-icon.svg";
 
 function AudioWord() {
     const [currentWord, setCurrentWord] = useState(null);
     const [userInput, setUserInput] = useState("");
-    const [result, setResult] = useState({ isCorrect: null, showResult: false }); // Combined state for correctness and result visibility
-    const [isLoading, setIsLoading] = useState(false);
+    const [result, setResult] = useState({ isCorrect: null, showResult: false });
     const [hiddenAnswer, setHiddenAnswer] = useState(true);
-    // Lista słów do losowania
+    // your full wordsList…
     const wordsList = [
         "mąka",
         "rzeka",
@@ -252,33 +252,30 @@ function AudioWord() {
         "teleskop",
         "obserwatorium"
     ];
-
-    // Funkcja do wybierania losowego słowa
-    // Modify your getRandomWord function:
-    const getRandomWord = async () => {
-        
-        let word = "";
-
-        
-            const randomIndex = Math.floor(Math.random() * wordsList.length);
-            const candidate = wordsList[randomIndex];
-
-            
-                word = candidate;
-
-        setCurrentWord(word);
-        
-        setUserInput("");
-        setResult({ isCorrect: null, showResult: false });
+    // speak helper
+    const speak = (text) => {
+        if (!window.speechSynthesis) return;
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = "pl-PL";
+        u.rate = 0.9;
+        u.pitch = 1.0;
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(u);
     };
 
-    // Funkcja do sprawdzania poprawności słowa
+    const getRandomWord = () => {
+        const candidate = wordsList[Math.floor(Math.random() * wordsList.length)];
+        setCurrentWord(candidate);
+        setUserInput("");
+        setResult({ isCorrect: null, showResult: false });
+        setHiddenAnswer(true);
+        // auto‑speak new word:
+        speak(candidate);
+    };
+
     const checkWord = () => {
-        const isCorrect = userInput.toLowerCase() === currentWord.toLowerCase();
-        setResult({
-            isCorrect, // true or false
-            showResult: true, // We want to show the result after checking
-        });
+        const isCorrect = userInput.trim().toLowerCase() === currentWord.toLowerCase();
+        setResult({ isCorrect, showResult: true });
     };
 
     return (
@@ -287,87 +284,82 @@ function AudioWord() {
             <button
                 className="btn-primary px-8 py-4 home-button"
                 onClick={() => window.location.href = '/learn-with-cuckoo'}>
-                <img src={homeIcon}></img>
+                <img src={homeIcon} alt="Home" />
             </button>
-            {!isLoading && currentWord && (
+
+            {currentWord ? (
                 <>
                     <p className="text-xl text-gray-700 mb-6">Posłuchaj słowa:</p>
-                    <div className="flex justify-center mb-6">
-                        <iframe
-                            src={`https://commons.wikimedia.org/wiki/File:Pl-${currentWord}.ogg?embedplayer=yes&showinfo=false`}
-                            width="100"
-                            height="50"
-                            className="inline-block"
-                            frameBorder="0"
-                            allow="picture-in-picture"
-                            allowFullScreen
-                            title={`Audio dla słowa: ${currentWord}`}
-                        ></iframe>
-                    </div>
+                    {/* TTS play button */}
+                    <button
+                        onClick={() => speak(currentWord)}
+                        className="play-icon-btn"
+                    >
+                        <img src={speakerIcon} className="play-icon-btn__icon"></img>
+                        
+                    </button>
 
-                    {/* Input field */}
                     <input
                         type="text"
-                        className="pretty-input"
+                        className="pretty-input mb-4"
                         placeholder="Wpisz słowo"
                         value={userInput}
-                        onChange={(e) => setUserInput(e.target.value)}
+                        onChange={e => {
+                            setUserInput(e.target.value);
+                            setResult({ isCorrect: null, showResult: false });
+                        }}
                     />
 
-                    {/* Submit button */}
-                    <button
-                        onClick={checkWord}
-                        className="btn-primary px-8 py-4 mb-6"
-                    >
+                    <button onClick={checkWord} className="btn-primary px-8 py-4 mb-6">
                         Wyślij
                     </button>
 
-                    {/* Result message */}
                     {result.showResult && (
                         <p className="text-xl text-gray-700 mb-6">
                             {result.isCorrect
                                 ? "Brawo! Poprawnie napisane słowo."
-                                : `Oj! Spróbuj ponownie. Poprawne słowo to:`}
-                            <p className={hiddenAnswer ? "hidden-answer" : "hidden-answer.revealed"} onClick={() => setHiddenAnswer(false)}>{`${currentWord}`}</p>
+                                : <>
+                                    Oj! Spróbuj ponownie. Poprawne słowo to:
+                                    <span
+                                        className={hiddenAnswer ? "hidden-answer" : "hidden-answer revealed"}
+                                        onClick={() => setHiddenAnswer(false)}
+                                    >
+                                        {currentWord}
+                                    </span>
+                                </>
+                            }
                         </p>
-                        
                     )}
 
-                    {/* Next word button */}
                     <button
-                        onClick={() => { getRandomWord(); setHiddenAnswer(true) }}
-                        className="btn-primary px-8 py-4 mb-6"
+                        onClick={getRandomWord}
+                        className="btn-primary px-8 py-4"
                     >
                         Następne słowo
                     </button>
-
                 </>
-            )}
-
-            {/* Show mascot with the selected state and result */}
-            <Mascot selected={userInput} showResult={result.showResult} correct={currentWord} />
-            
-
-            {/* New word button */}
-            {!currentWord && (
+            ) : (
                 <button
-                    onClick={() => getRandomWord()}
+                    onClick={getRandomWord}
                     className="btn-primary px-8 py-4"
                 >
                     Nowe słowo
                 </button>
             )}
 
-            {/* Stopka */}
-            <footer>
-                <p>Plik audio użyty na tej stronie pochodzi z <a href={`https://commons.wikimedia.org/wiki/File:Pl-${currentWord}.ogg`} target="_blank">Wikimedia Commons</a>.
-                    Licencja: <a href="https://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5 Generic License</a>.</p>
-            </footer>
+            <Mascot
+                selected={userInput.trim().toLowerCase()}
+                showResult={result.showResult}
+                correct={currentWord}
+            />
+
+            
         </div>
     );
 }
 
 export default AudioWord;
+
 
 
 
