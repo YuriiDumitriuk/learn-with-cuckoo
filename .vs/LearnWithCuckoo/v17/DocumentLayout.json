@@ -11,16 +11,20 @@
       "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\src\\pages\\lesson.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:src\\pages\\lesson.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\src\\components\\mascot.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:src\\components\\mascot.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -31,12 +35,8 @@
       "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\src\\pages\\lesson.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|solutionrelative:src\\pages\\lesson.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8DC6D53-657B-3661-9D01-D0B8E48EDAAC}|learnwithcuckoo.esproj|c:\\users\\cllop\\source\\repos\\learnwithcuckoo\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -86,21 +86,19 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-07T12:58:07.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:58:07.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Lesson.jsx",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\pages\\Lesson.jsx",
               "RelativeDocumentMoniker": "src\\pages\\Lesson.jsx",
               "ToolTip": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\pages\\Lesson.jsx",
               "RelativeToolTip": "src\\pages\\Lesson.jsx",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAowHwAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowHwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-07T12:35:45.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:35:45.844Z"
             },
             {
               "$type": "Document",
@@ -110,14 +108,13 @@
               "RelativeDocumentMoniker": "src\\index.css",
               "ToolTip": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\index.css",
               "RelativeToolTip": "src\\index.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABIBAAAAAAAAAAAwwEEBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-07T12:42:23.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:42:23.794Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\main.jsx",
               "RelativeDocumentMoniker": "src\\main.jsx",
@@ -125,12 +122,11 @@
               "RelativeToolTip": "src\\main.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-07T12:45:56.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:45:56.597Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\App.jsx",
               "RelativeDocumentMoniker": "src\\App.jsx",
@@ -138,8 +134,7 @@
               "RelativeToolTip": "src\\App.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-07T12:30:56.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:30:56.338Z"
             },
             {
               "$type": "Document",
@@ -149,14 +144,14 @@
               "RelativeDocumentMoniker": "src\\pages\\AudioWord.jsx",
               "ToolTip": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\pages\\AudioWord.jsx",
               "RelativeToolTip": "src\\pages\\AudioWord.jsx",
-              "ViewState": "AgIAABkBAAAAAAAAAAAAwCcBAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAQwBYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-04-08T19:23:19.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\package.json",
               "RelativeDocumentMoniker": "package.json",
@@ -164,12 +159,11 @@
               "RelativeToolTip": "package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-09T08:50:02.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T08:50:02.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -177,12 +171,11 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-04-09T09:01:28.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T09:01:28.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Mascot.jsx",
               "DocumentMoniker": "C:\\Users\\cllop\\source\\repos\\LearnWithCuckoo\\src\\components\\Mascot.jsx",
               "RelativeDocumentMoniker": "src\\components\\Mascot.jsx",
@@ -190,8 +183,7 @@
               "RelativeToolTip": "src\\components\\Mascot.jsx",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-07T12:35:59.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T12:35:59.257Z"
             },
             {
               "$type": "Document",

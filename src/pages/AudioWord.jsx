@@ -10,6 +10,9 @@ function AudioWord() {
     const [userInput, setUserInput] = useState("");
     const [result, setResult] = useState({ isCorrect: null, showResult: false });
     const [hiddenAnswer, setHiddenAnswer] = useState(true);
+    const [currentBestScore, setCurrentBestScore] = useState(0);
+    const [bestScore, setBestScore] = useState(0);
+    const [counter, setCounter] = useState(0);
     // your full wordsList…
     const wordsList = [
         "mąka",
@@ -271,22 +274,36 @@ function AudioWord() {
         setHiddenAnswer(true);
         // auto‑speak new word:
         speak(candidate);
+        setCounter(0);
     };
 
     const checkWord = () => {
         const isCorrect = userInput.trim().toLowerCase() === currentWord.toLowerCase();
         setResult({ isCorrect, showResult: true });
+
+        if (isCorrect) {
+            if (counter === 0) {
+                setCurrentBestScore(currentBestScore + 1);
+                setCounter(1);
+            }
+        }
+        else {
+            setCurrentBestScore(0);
+            setCounter(0);
+        }
+        
+        
     };
 
     return (
         <div className="centered min-h-screen bg-gray-50 p-6">
-            <h1 className="text-5xl font-bold text-blue-500 mb-8">Nauka słów</h1>
+            <h1 className="text-5xl font-bold text-blue-500 ">Nauka słów</h1>
             <button
                 className="btn-primary px-8 py-4 home-button"
                 onClick={() => window.location.href = '/learn-with-cuckoo'}>
                 <img src={homeIcon} alt="Home" />
             </button>
-
+            <div className="hot-streak">{currentBestScore}/{bestScore}</div>
             {currentWord ? (
                 <>
                     <p className="text-xl text-gray-700 mb-6">Posłuchaj słowa:</p>
@@ -317,7 +334,7 @@ function AudioWord() {
                     {result.showResult && (
                         <p className="text-xl text-gray-700 mb-6">
                             {result.isCorrect
-                                ? "Brawo! Poprawnie napisane słowo."
+                                ?"Brawo! Poprawnie napisane słowo."
                                 : <>
                                     Oj! Spróbuj ponownie. Poprawne słowo to:
                                     <span
